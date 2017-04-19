@@ -7,7 +7,6 @@ page = 1
 while True:
 	url = 'https://api.github.com/repos/holbertonschool/Betty/commits?page=%d' % page
 	info = urllib2.urlopen(url).read()
-	r = requests.head(url=url, headers={'User-Agent': 'Wabluekey', 'Authorization': 'token d50c9558a8c630dd87bb31192db4c79cd61a1337'})
 	the_data = json.loads(info)
 	i = 0
 	dict_len = len(the_data)
